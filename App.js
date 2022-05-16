@@ -10,6 +10,11 @@ import {
 } from "react-native";
 import logo from "./assets/IMDb.png";
 import film from "./assets/film.jpg";
+import anne from "./assets/anne.jpg";
+import jessica from "./assets/jessica.jpg";
+import mackenzie from "./assets/mackenzie.jpg";
+import matthew from "./assets/matthew.jpg";
+
 import { FontAwesome } from "@expo/vector-icons";
 
 export default function App() {
@@ -57,7 +62,7 @@ export default function App() {
           ></View>
         </View>
         {/* Movie Card*/}
-        <View style={{ height: 500, backgroundColor: "#212121" }}>
+        <View style={{ height: 360, backgroundColor: "#212121" }}>
           {/* Movie Card title*/}
           <Text
             style={{
@@ -120,7 +125,7 @@ export default function App() {
           <View
             style={{ display: "flex", flexDirection: "row", paddingTop: 20 }}
           >
-            {/* Rating picture*/}
+            {/* Rating result*/}
             <View
               style={{
                 flex: 1,
@@ -202,8 +207,99 @@ export default function App() {
             </View>
           </View>
         </View>
-
-        <View style={{ height: 500, backgroundColor: "yellow" }}></View>
+        {/* Separation bar */}
+        <View style={{ height: 20, backgroundColor: "#191919" }}></View>
+        {/* Characters Cards Section*/}
+        <View style={{ height: 500, backgroundColor: "#212121" }}>
+          {/* Characters Cards Title */}
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 20,
+                color: "#C0C0C0",
+                textAlignVertical: "bottom",
+                paddingTop: 5,
+              }}
+            >
+              Top Billed Cast
+            </Text>
+            <Text
+              style={{
+                fontSize: 14,
+                color: "#1B77BD",
+                textAlignVertical: "bottom",
+                paddingTop: 15,
+              }}
+            >
+              SEE ALL
+            </Text>
+          </View>
+          {/* Characters Cards */}
+          <ScrollView horizontal={true}>
+            <View
+              style={{
+                height: 300,
+                width: 152,
+                backgroundColor: "#2A2A2A",
+                margin: 2,
+              }}
+            >
+              <Image
+                source={anne}
+                style={{ height: 200, width: 150, margin: 5 }}
+              ></Image>
+              <Text style={{ color: "#C0C0C0" }}>Anne</Text>
+            </View>
+            <View
+              style={{
+                height: 300,
+                width: 152,
+                backgroundColor: "#2A2A2A",
+                margin: 2,
+              }}
+            >
+              <Image
+                source={jessica}
+                style={{ height: 200, width: 150, margin: 5 }}
+              ></Image>
+              <Text style={{ color: "#C0C0C0" }}>Jessica</Text>
+            </View>
+            <View
+              style={{
+                height: 300,
+                width: 152,
+                backgroundColor: "#2A2A2A",
+                margin: 2,
+              }}
+            >
+              <Image
+                source={mackenzie}
+                style={{ height: 200, width: 150, margin: 5 }}
+              ></Image>
+              <Text style={{ color: "#C0C0C0" }}>Mackenzie</Text>
+            </View>
+            <View
+              style={{
+                height: 300,
+                width: 152,
+                backgroundColor: "#2A2A2A",
+                margin: 2,
+              }}
+            >
+              <Image
+                source={matthew}
+                style={{ height: 200, width: 150, margin: 5 }}
+              ></Image>
+              <Text style={{ color: "#C0C0C0" }}>Matthew</Text>
+            </View>
+          </ScrollView>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
